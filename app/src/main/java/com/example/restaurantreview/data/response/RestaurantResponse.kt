@@ -1,5 +1,6 @@
 package com.example.restaurantreview.data.response
 
+
 import com.google.gson.annotations.SerializedName
 
 data class RestaurantResponse(
@@ -14,18 +15,6 @@ data class RestaurantResponse(
 	val message: String
 )
 
-data class CustomerReviewsItem(
-
-	@field:SerializedName("date")
-	val date: String,
-
-	@field:SerializedName("review")
-	val review: String,
-
-	@field:SerializedName("name")
-	val name: String
-)
-
 data class Restaurant(
 
 	@field:SerializedName("customerReviews")
@@ -38,13 +27,25 @@ data class Restaurant(
 	val name: String,
 
 	@field:SerializedName("rating")
-	val rating: Any,
+	val rating: Double,
 
 	@field:SerializedName("description")
 	val description: String,
 
 	@field:SerializedName("id")
 	val id: String
+)
+
+data class CustomerReviewsItem(
+
+	@field:SerializedName("date")
+	val date: String,
+
+	@field:SerializedName("review")
+	val review: String,
+
+	@field:SerializedName("name")
+	val name: String
 )
 
 data class PostReviewResponse(
